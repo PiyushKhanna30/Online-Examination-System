@@ -1,12 +1,51 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="deleteuser.aspx.cs" Inherits="deleteuser" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="deleteqpaper.aspx.cs" Inherits="deleteqpaper" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Delete User</title>
+    <title>Delete Paper</title>
+    <style type="text/css">
+        .style1{
+            width:1024px;
+        }
+        .style2{
+            font-family:"Monotype Corsiva";
+            font-size:xx-large;
+            font-weight:bold;
+            color:#3399FF;
+            text-align:center;
+            padding:0;
+        }
+        .style3{
+            font-size:large;
+            font-weight:bold;
+            color:#FFFFFF;
+            font-family:"Monotype Corsiva";
+        }
+        .style4{
+            width:100%;
+        }
+        .style5{
+            text-align:center;
+        }
+        .style12{
+            text-align:center;
+            width:165px;
+        }
+        .style14{
+            text-align:center;
+            width:166px;
+        }
+        .style15{
+            text-align:center;
+            width:165px;
+            color:#FFFFFF;
+            text-decoration:underline;
+        }
+    </style>
 </head>
-<body>
+<body bgcolor="#cccccc">
     <form id="form1" runat="server">
     <div>
         <table align="center" class="style1">
@@ -46,34 +85,28 @@
                 </td>
             </tr>
             <tr>
-                <td style="text-align:center">
-                    <asp:DropDownList ID="userlist" runat="server" Height="22px" Width="200px" DataSourceID="SqlDataSource1" DataTextField="username" DataValueField="username"></asp:DropDownList>
+                <td class="style5">
+                    <asp:DropDownList ID="testlist" runat="server" Height="20px" width="201px" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="settype" DataValueField="settype"></asp:DropDownList>
                 </td>
             </tr>
             <tr>
-                <td style="text-align:center">
+                <td class="style5">
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=DESKTOP-J1EFRCC;Initial Catalog=OnlneExamSystem;Integrated Security=True"
-                        SelectCommand="Select [username] from [login] where ([type] = @type)">
-                        <SelectParameters>
-                            <asp:ControlParameter ControlID="userlist" DefaultValue="'user" Name="type" PropertyName="SelectedValue" Type="String" />
-                        </SelectParameters>
-                    </asp:SqlDataSource>
+                        SelectCommand="select distinct [settype] from [question] order by [settype]"></asp:SqlDataSource>
                 </td>
             </tr>
             <tr>
-                <td style="text-align:center">
-                    <asp:Button ID="duser" runat="server" Text="Delete User" Width="200px" style="font-weight:700" onclick="duser_click" />
+                <td class="style5">
+                    <asp:Button ID="dqpaper" runat="server" Font-Bold="True" Text="Delete Test" Width="200px" onclick="dqpaper_Click"></asp:Button>
                 </td>
             </tr>
             <tr>
-                <td style="text-align:center">
+                <td class="style5">
                     <asp:Label ID="msg" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
-                <td bgcolor="#3333FF">
-                    &nbsp;
-                </td>
+                <td bgcolor="#33333FF">&nbsp;</td>
             </tr>
             <tr>
                 <td bgcolor="#666666" style="text-align:center">

@@ -1,10 +1,46 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="setqpaper.aspx.cs" Inherits="setqpaper" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="editqpaper.aspx.cs" Inherits="editqpaper" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Set Question Paper</title>
+    <title>Edit Question Paper</title>
+    <style type="text/css">
+        .style1{
+            width:1024px;
+        }
+        .style2{
+            font-family:"Monotype Corsiva";
+            font-size:xx-large;
+            font-weight:bold;
+            color:#3399FF;
+            text-align:center;
+            padding:0;
+        }
+        .style3{
+            font-size:large;
+            font-weight:bold;
+            color:#FFFFFF;
+            font-family:"Monotype Corsiva";
+        }
+        .style4{
+            width:100%;
+        }
+        .style5{
+            text-align:center;
+        }
+        .style12{
+            text-align:center;
+            width:165px;
+        }
+        .style14{
+            text-align:center;
+            width:166px;
+        }
+        .style16{
+            width:250px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -46,21 +82,11 @@
                 </td>
             </tr>
             <tr>
-                <td>
-                    <asp:DropDownList ID="testlist" runat="server" height="20px" width="150px" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="settype" DataValueField="settype"></asp:DropDownList>
-                    <asp:EntityDataSource ID="SqlDataSource2" runat="server">
-                    </asp:EntityDataSource>
-                    <asp:TextBox ID="testname" runat="server" Visible="False"></asp:TextBox>
-                    <asp:Button ID="ntest" runat="server" Font-Bold="True" Text="New Test" Width="88px" onclick="ntest_click"></asp:Button>
-                    <asp:Label ID="msg1" runat="server" ForeColor="Blue"></asp:Label>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=DESKTOP-J1EFRCC;Initial Catalog=OnlneExamSystem;Integrated Security=True"
-                        SelectCommand="select distinct [settype] from [question] order by [settype]"></asp:SqlDataSource>
-                </td>
+                <td>&nbsp;</td>
             </tr>
             <tr>
                 <td>
-                    <asp:TextBox ID="question" runat="server" height="50px" width="600px" Font-Bold="True"></asp:TextBox>
-                    <asp:Label ID="msg2" runat="server" ForeColor="Blue"></asp:Label>
+                    <asp:TextBox ID="question" runat="server" Height="50px" Width="600px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -68,9 +94,8 @@
             </tr>
             <tr>
                 <td>
-                    <asp:TextBox ID="opt1" runat="server" width="600px" Font-Bold="True"></asp:TextBox>
-                    <asp:RadioButton ID="radiobutton1" runat="server" Checked="True" GroupName="opt"></asp:RadioButton>
-                    <asp:Label ID="msg3" runat="server" ForeColor="Blue"></asp:Label>
+                    <asp:TextBox ID="opt1" runat="server" Width="600px"></asp:TextBox>
+                    <asp:RadioButton ID="radiobutton1" runat="server" GroupName="opt"></asp:RadioButton>
                 </td>
             </tr>
             <tr>
@@ -78,9 +103,8 @@
             </tr>
             <tr>
                 <td>
-                    <asp:TextBox ID="opt2" runat="server" width="600px" Font-Bold="True"></asp:TextBox>
+                    <asp:TextBox ID="opt2" runat="server" Width="600px"></asp:TextBox>
                     <asp:RadioButton ID="radiobutton2" runat="server" GroupName="opt"></asp:RadioButton>
-                    <asp:Label ID="msg4" runat="server" ForeColor="Blue"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -88,9 +112,8 @@
             </tr>
             <tr>
                 <td>
-                    <asp:TextBox ID="opt3" runat="server" width="600px" Font-Bold="True"></asp:TextBox>
+                    <asp:TextBox ID="opt3" runat="server" Width="600px"></asp:TextBox>
                     <asp:RadioButton ID="radiobutton3" runat="server" GroupName="opt"></asp:RadioButton>
-                    <asp:Label ID="msg5" runat="server" ForeColor="Blue"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -98,32 +121,38 @@
             </tr>
             <tr>
                 <td>
-                    <asp:TextBox ID="opt4" runat="server" width="600px" Font-Bold="True"></asp:TextBox>
+                    <asp:TextBox ID="opt4" runat="server" Width="600px" AutoPostBAck="True"></asp:TextBox>
                     <asp:RadioButton ID="radiobutton4" runat="server" GroupName="opt"></asp:RadioButton>
-                    <asp:Label ID="msg6" runat="server" ForeColor="Blue"></asp:Label>
                 </td>
             </tr>
             <tr>
-                <td>
-                    <asp:Label ID="msg7" runat="server" ForeColor="Blue"></asp:Label>
-                </td>
+                <td>&nbsp;</td>
             </tr>
             <tr>
                 <td>
                     <table align="center" class="style4">
                         <tr>
                             <td class="style16">
-                                <asp:Button ID="submit" runat="server" Font-Bold="True" Text="Add Question" OnClick="Button2_Click"></asp:Button>
+                                <asp:Button ID="update" runat="server" Font-Bold="True" Text="Update" OnClick="Button1_Click"></asp:Button>
+                            </td>
+                            <td class="style16">
+                                <asp:Button ID="delete" runat="server" Font-Bold="True" Text="Delete" OnClick="Button2_Click"></asp:Button>
+                                &nbsp;
                             </td>
                             <td>
-                                <asp:Button ID="paperview" runat="server" Font-Bold="True" Text="View Paper" OnClick="paperview_Click"></asp:Button>
+                                <asp:Button ID="viewpaper" runat="server" Font-Bold="True" Text="View Paper" OnClick="Button3_Click"></asp:Button>
                             </td>
                         </tr>
                     </table>
                 </td>
             </tr>
+           <tr>
+                <td bgcolor="#33333FF">&nbsp;</td>
+            </tr>
             <tr>
-                <td>&nbsp;</td>
+                <td bgcolor="#666666" style="text-align:center">
+                    <span class="style3">Designed by :- Sahil Mehra</span>
+                </td>
             </tr>
         </table>
     </div>

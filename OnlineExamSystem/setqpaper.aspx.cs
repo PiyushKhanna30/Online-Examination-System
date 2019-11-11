@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Configuration;
 
 public partial class setqpaper : System.Web.UI.Page
 {
@@ -28,7 +29,8 @@ public partial class setqpaper : System.Web.UI.Page
         {
             Response.Redirect("login.aspx");
         }
-        con = new SqlConnection("Data Source=.;AttachDbFileName=|DataDirectory|\\myDB2.mdf;Integrated Security=True;User Instance=True");
+        con = new SqlConnection(ConfigurationManager.ConnectionStrings["teststring"].ConnectionString);
+        //con = new SqlConnection("Data Source=.;AttachDbFileName=|DataDirectory|\\myDB2.mdf;Integrated Security=True;User Instance=True");
 
         msg7.Text = Request.QueryString["msg"];
     }

@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
+using System.Configuration;
 
 public partial class login : System.Web.UI.Page
 {
@@ -18,7 +19,7 @@ public partial class login : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        con = new SqlConnection("Data Source=.;AttachDbFileName=|DataDirectory|\\myDB2.mdf;Integrated Security=True;User Instance=True");
+        con = new SqlConnection(ConfigurationManager.ConnectionStrings["teststring"].ConnectionString);
         con.Open();
     }
     protected void submit_Click(object sender, EventArgs e)
