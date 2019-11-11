@@ -18,7 +18,7 @@ public partial class login : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        con = new SqlConnection("Data Source=.;AttachDbFileName=|DataDirectory|\\myDB.mdf;Integrated Security=True;User Instance=True");
+        con = new SqlConnection("Data Source=.;AttachDbFileName=|DataDirectory|\\myDB2.mdf;Integrated Security=True;User Instance=True");
         con.Open();
     }
     protected void submit_Click(object sender, EventArgs e)
@@ -38,7 +38,7 @@ public partial class login : System.Web.UI.Page
             else
             {
                 ck=new HttpCookie("cook");
-                ad.Values.Add("un",name.Text);
+                ck.Values.Add("un",name.Text);
                 Response.Cookies.Add(ck);
                 Response.Redirect("testselection.aspx");
             }

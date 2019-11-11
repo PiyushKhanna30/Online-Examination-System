@@ -24,7 +24,7 @@ public partial class adduser : System.Web.UI.Page
             Response.Redirect("login.aspx");
         }
 
-        con = new SqlConnection("Data Source=.;AttachDbFileName=|DataDirectory|\\myDB.mdf;Integrated Security=True;User Instance=True");
+        con = new SqlConnection("Data Source=.;AttachDbFileName=|DataDirectory|\\myDB2.mdf;Integrated Security=True;User Instance=True");
         con.Open();
     }
     protected void submit_Click(object sender, EventArgs e)
