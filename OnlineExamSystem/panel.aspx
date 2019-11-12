@@ -10,10 +10,10 @@
             width:1024px;
         }
         .style2{
-            font-family:"Monotype Corsiva";
+            font-family:Verdana;
             font-size:xx-large;
             font-weight:bold;
-            color:#3399FF;
+            color:#000099;
             text-align:center;
             padding:0;
         }
@@ -21,13 +21,13 @@
             font-size:large;
             font-weight:bold;
             color:#FFFFFF;
-            font-family:"Monotype Corsiva";
+            font-family:"Comic Sans MS";
         }
         .style4{
-            text-align:center;
+            width:100%;
         }
         .style5{
-            width:650px;
+            text-align:center;
         }
         .style6{
             width:30px;
@@ -44,6 +44,9 @@
         .style10{
             width:161px;
         }
+        .styleText {
+            font-family:Tahoma;
+        }
     </style>
 </head>
 <body bgcolor="#cccccc">
@@ -54,21 +57,24 @@
                 <td class="style2">Online Examination System</td>
             </tr>
             <tr>
+                <td bgcolor="#3333FF">&nbsp;</td>
+            </tr>
+            <tr>
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td bgcolor="#999999">
-                    <b><a href="logout.aspx">Logout</a></b>
+                <td class="styleText">
+                    <a href="logout.aspx">Logout</a>
                 </td>
             </tr>
             <tr>
-                <td>
+                <td class="styleText">
                     <asp:Label runat="server" Text="Label" ID="time"></asp:Label>
                 </td>
             </tr>
             <tr>
-                <td class="style4">
-                    <asp:Label Id="msg" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="#00CC00"></asp:Label>
+                <td class="style4 styleText">
+                    <asp:Label Id="msg" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -76,9 +82,9 @@
             </tr>
             <tr>
                 <td style="text-align:center">
-                    <table align="center" bgcolor="#3399FF" class="style5">
+                    <table align="center" bgcolor="#3333FF" class="style5">
                         <tr>
-                            <td class="style6">&nbsp;</td>
+                            <td class="style6 styleText">&nbsp;</td>
                             <td bgcolor="#FFFFCC" class="style7">
                                 <%con.Open();
                                   rqry = "select * from question where settype='" + testtype + "' order by qid";
@@ -95,11 +101,11 @@
                                       {
                                           %><%int q=Convert.ToInt16(rdr.GetValue(0));
                                           qid=q; %>
-                                <table align="center" class="style8">
+                                <table align="center" class="style8 styleText">
                                     <tr>
                                         <td>&nbsp;</td>
                                     </tr>
-                                    <tr>
+                                    <tr >
                                         <td>
                                             Q:-<%=count%><%=rdr.GetValue(1)%>
                                         </td>
@@ -148,15 +154,15 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <table align="center" class="style8">
+                                            <table align="center" class="style8 styleText">
                                                 <tr>
-                                                    <td class="style9">
+                                                    <td colspan="3">
                                                         <asp:Button ID="back" runat="server" Text="Back" Height="20px" width="100px" OnClick="back_Click"></asp:Button>
                                                     </td>
-                                                    <td class="style10">
+                                                    <td  colspan="3">
                                                         <asp:Button ID="next" runat="server" Text="Next" Height="20px" width="100px" OnClick="next_Click"></asp:Button>
                                                     </td>
-                                                  <td>
+                                                  <td colspan="3">
                                                         <asp:Button ID="finish" runat="server" Text="Finish" Height="20px" width="100px" OnClick="finish_Click"></asp:Button>
                                                     </td>
                                                 </tr>
@@ -177,6 +183,9 @@
                         </tr>
                     </table>
                 </td>
+            </tr>
+            <tr>
+                <td >&nbsp;</td>
             </tr>
             <tr>
                 <td bgcolor="#3333FF">&nbsp;</td>

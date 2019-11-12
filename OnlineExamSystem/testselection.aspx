@@ -10,10 +10,10 @@
             width:1024px;
         }
         .style2{
-            font-family:"Monotype Corsiva";
+            font-family:Verdana;
             font-size:xx-large;
             font-weight:bold;
-            color:#3399FF;
+            color:#000099;
             text-align:center;
             padding:0;
         }
@@ -21,7 +21,7 @@
             font-size:large;
             font-weight:bold;
             color:#FFFFFF;
-            font-family:"Monotype Corsiva";
+            font-family:"Comic Sans MS";
         }
         .style9{
             width:100%;
@@ -39,9 +39,11 @@
         }
         .style13{
             font-size:large;
-            color:#FFFFFF;
             font-weight:bold;
             padding:0;
+        }
+        .styleText {
+            font-family:Tahoma;
         }
     </style>
 </head>
@@ -56,10 +58,13 @@
                 <td>
                     <table align="center" class="style1">
                         <tr>
-                            <td bgcolor="#3399FF">&nbsp;</td>
+                            <td bgcolor="#3333FF">&nbsp;</td>
                         </tr>
                         <tr>
-                            <td style="text-align:center">
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="styleText" style="text-align:center; color:000099;">
                                 <b><a href="logout.aspx">Logout</a></b>
                             </td>
                         </tr>
@@ -70,25 +75,23 @@
                             <td style="text-align:center">
                                 <table align="center" class="style9">
                                     <tr>
-                                        <td class="style10">&nbsp;</td>
-                                        <td bgcolor="#66CCFF" class="style11">
-                                            <table align="center" class="style9">
+                                        <td  class="style10">&nbsp;</td>
+                                        <td class="style11">
+                                            <table align="center" class="style9 styleText">
+                                                
                                                 <tr>
-                                                    <td class="style12">&nbsp;</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="style13">Select a Test</td>
+                                                    <td class="style13 styleText">Select a Test</td>
                                                 </tr>
                                                 <tr>
                                                     <td>&nbsp;</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
+                                                    <td class="styleText">
                                                         <asp:DropDownList ID="testlist" runat="server" height="22px" width="200px" DataSourceID="SqlDataSource1" DataTextField="settype" DataValueField="settype"></asp:DropDownList>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
+                                                    <td class="styleText">
                                                         <asp:Button ID="submit" runat="server" Text="Submit" Width="200px" OnClick="Button1_Click" Style="font-weight:700"></asp:Button>
                                                     </td>
                                                 </tr>
@@ -97,19 +100,15 @@
                                                 </tr>
                                             </table>
                                         </td>
+
                                         <td>&nbsp;</td>
                                     </tr>
                                 </table>
                             </td>
                         </tr>
+                        
                         <tr>
-                             <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                             <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                              <td bgcolor="#3399FF">&nbsp;</td>
+                              <td bgcolor="#3333FF">&nbsp;</td>
                         </tr>
                     </table>
                 </td>

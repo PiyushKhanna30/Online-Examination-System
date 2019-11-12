@@ -10,10 +10,10 @@
             width:1024px;
         }
         .style2{
-            font-family:"Monotype Corsiva";
+            font-family:Verdana;
             font-size:xx-large;
             font-weight:bold;
-            color:#3399FF;
+            color:#000099;
             text-align:center;
             padding:0;
         }
@@ -21,7 +21,7 @@
             font-size:large;
             font-weight:bold;
             color:#FFFFFF;
-            font-family:"Monotype Corsiva";
+            font-family:"Comic Sans MS";
         }
         .style4{
             width:100%;
@@ -31,11 +31,8 @@
         }
         .style12{
             text-align:center;
-            width:165px;
-        }
-        .style14{
-            text-align:center;
             width:166px;
+            font-family:Tahoma;
         }
         .style20{
             width:167px;
@@ -55,9 +52,12 @@
             color:#FFFFFF;
             text-decoration:underline;
         }
+        .styleText {
+            font-family:Tahoma;
+        }
     </style>
 </head>
-<body>
+<body  bgcolor="#cccccc">
     <form id="form1" runat="server">
     <div>
         <table align="center" class="style1">
@@ -68,7 +68,7 @@
                 <td bgcolor="#3333FF">&nbsp;</td>
             </tr>
             <tr>
-                <td bgcolor="#99CCFF" style="color=#000099"; font-size:medium; font-weight:700">
+                <td bgcolor="#99CCFF" style="color:#000099; font-size:medium; font-weight:700">
                     <table align="center" class="style4">
                         <tr>
                             <td class="style12">
@@ -80,16 +80,16 @@
                             <td class="style12">
                                 <a href="setqpaper.aspx">Set Q Paper</a>
                             </td>
-                            <td class="style14">
+                            <td class="style12">
                                 <a href="paperview.aspx">Preview Q Paper</a>
                             </td>
-                            <td class="style14">
+                            <td class="style12">
                                 <a href="deleteqpaper.aspx">Delete Q Paper</a>
                             </td>
-                            <td class="style14">
+                            <td class="style12">
                                 <a href="reports.aspx">View Report</a>
                             </td>
-                            <td class="style5">
+                            <td class="style12">
                                 <a href="adminlogout.aspx">Logout</a>
                             </td>
                         </tr>
@@ -100,10 +100,7 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td  bgcolor="#0066FF">
+                <td class="styleText" bgcolor="#0066FF">
                     <table align="center" class="style4">
                         <tr>
                             <td class="style22">User</td>

@@ -6,14 +6,15 @@
 <head runat="server">
     <title>Paper View</title>
     <style type="text/css">
+        
         .style1{
             width:1024px;
         }
         .style2{
-            font-family:"Monotype Corsiva";
+            font-family:Verdana;
             font-size:xx-large;
             font-weight:bold;
-            color:#3399FF;
+            color:#000099;
             text-align:center;
             padding:0;
         }
@@ -21,7 +22,7 @@
             font-size:large;
             font-weight:bold;
             color:#FFFFFF;
-            font-family:"Monotype Corsiva";
+            font-family:"Comic Sans MS";
         }
         .style4{
             width:100%;
@@ -31,24 +32,24 @@
         }
         .style12{
             text-align:center;
-            width:165px;
-        }
-        .style14{
-            text-align:center;
             width:166px;
+            font-family:Tahoma;
         }
+
         .style15{
             text-align:center;
             width:165px;
             color:#FFFFFF;
             text-decoration:underline;
         }
+        .styleText {
+            font-family:Tahoma;
+        }
         .style16{
             text-align:center;
-            font-family:"Monotype Corsiva";
+            font-family:"Tahoma";
             font-size:medium;
             font-weight:bold;
-            color:#0000FF;
         }
         .style17{
             width:36px;
@@ -67,7 +68,7 @@
         }
     </style>
 </head>
-<body>
+<body bgcolor="#cccccc">
     <form id="form1" runat="server">
     <div>
         <table align="center" class="style1">
@@ -78,7 +79,7 @@
                 <td bgcolor="#3333FF">&nbsp;</td>
             </tr>
             <tr>
-                <td bgcolor="#99CCFF" style="color=#000099"; font-size:medium; font-weight:700">
+                <td bgcolor="#99CCFF" style="color:#000099; font-size:medium; font-weight:700">
                     <table align="center" class="style4">
                         <tr>
                             <td class="style12">
@@ -90,16 +91,16 @@
                             <td class="style12">
                                 <a href="setqpaper.aspx">Set Q Paper</a>
                             </td>
-                            <td class="style14">
+                            <td class="style12">
                                 <a href="paperview.aspx">Preview Q Paper</a>
                             </td>
-                            <td class="style14">
+                            <td class="style12">
                                 <a href="deleteqpaper.aspx">Delete Q Paper</a>
                             </td>
-                            <td class="style14">
+                            <td class="style12">
                                 <a href="reports.aspx">View Report</a>
                             </td>
-                            <td class="style5">
+                            <td class="style12">
                                 <a href="adminlogout.aspx">Logout</a>
                             </td>
                         </tr>
@@ -112,23 +113,24 @@
                 </td>
             </tr>
             <tr>
-                <td class="style16">
+                <td class="style16 styleText">
                     Select a question Per to preview
                 </td>
             </tr>
+
             <tr>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td style="text0align:center">
+                <td style="text-align:center">
                     &nbsp;<asp:DropDownList ID="testlist" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="settype" DataValueField="settype" Height="24px" Width="170px"
                         onselectedindexchanged="testlist_SelectedIndexChanged"></asp:DropDownList>
                 </td>
             </tr>
             <tr>
-                <td>
+                <td class="styleText">
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=DESKTOP-J1EFRCC;Initial Catalog=OnlneExamSystem;Integrated Security=True"
                         SelectCommand="Select distinct [settype] from [question] order by [settype]"></asp:SqlDataSource>
+
+                    <br />
+
                     <asp:HiddenField ID="HiddenField1" runat="server" />
                 </td>
             </tr>
@@ -138,7 +140,7 @@
                         <tr>
                             <td>&nbsp;</td>
                             <td bgcolor="#0066FF">
-                                <table align="center" class="style4">
+                                <table align="center" class="style4 styleText">
                                     <tr>
                                         <td class="style17">QID</td>
                                         <td class="style19">Question</td>
@@ -242,6 +244,9 @@
                         </tr>
                     </table>
                 </td>
+            </tr>
+            <tr>
+                <td >&nbsp;</td>
             </tr>
             <tr>
                 <td bgcolor="#3333FF">&nbsp;</td>

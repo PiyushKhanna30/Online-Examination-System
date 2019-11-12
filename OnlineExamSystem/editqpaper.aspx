@@ -61,7 +61,7 @@
                 </td>
             </tr>
             <tr>
-                <td bgcolor="#99CCFF" style="color=#000099"; font-size:medium; font-weight:700">
+                    <td bgcolor="#99CCFF" style="color:#000099; font-size:medium; font-weight:700">
                     <table align="center" class="style4">
                         <tr>
                             <td class="style12">
