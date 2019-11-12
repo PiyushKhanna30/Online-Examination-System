@@ -5,47 +5,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Start Exam</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <style type="text/css">
-        .style1{
-            width:1024px;
-        }
-        .style2{
-            font-family:Verdana;
-            font-size:xx-large;
-            font-weight:bold;
-            color:#000099;
-            text-align:center;
-            padding:0;
-        }
-        .style3{
-            font-size:large;
-            font-weight:bold;
-            color:#FFFFFF;
-            font-family:"Comic Sans MS";
-        }
-        .style4{
-            width:100%;
-        }
-        .style5{
-            text-align:center;
-        }
         .style6{
             width:30px;
         }
         .style7{
             width:585px;
-        }
-        .style8{
-            width:100%;
-        }
-        .style9{
-            width:134px;
-        }
-        .style10{
-            width:161px;
-        }
-        .styleText {
-            font-family:Tahoma;
         }
     </style>
 </head>
@@ -101,7 +67,7 @@
                                       {
                                           %><%int q=Convert.ToInt16(rdr.GetValue(0));
                                           qid=q; %>
-                                <table align="center" class="style8 styleText">
+                                <table align="center" class="style4 styleText">
                                     <tr>
                                         <td>&nbsp;</td>
                                     </tr>
@@ -154,7 +120,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <table align="center" class="style8 styleText">
+                                            <table align="center" class="style4 styleText">
                                                 <tr>
                                                     <td colspan="3">
                                                         <asp:Button ID="back" runat="server" Text="Back" Height="20px" width="100px" OnClick="back_Click"></asp:Button>

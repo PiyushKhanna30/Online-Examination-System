@@ -5,35 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Add User</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <style type="text/css">
-        .style1{
-            width:1024px;
-        }
-        .style2{
-            font-family:"Verdana";
-            font-size:xx-large;
-            font-weight:bold;
-            color:#000099;
-            text-align:center;
-            padding:0;
-        }
-        .style3{
-            font-size:large;
-            font-weight:bold;
-            color:#FFFFFF;
-            font-family:"Comic Sans MS"
-        }
-        .style4{
-            width:100%;
-        }
-        .style5{
-            text-align:center;
-        }
-        .style12{
-            font-family:Tahoma;
-            text-align:center;
-            width:166px;
-        }
         .style15{
             width:650px;
         }
@@ -45,26 +18,18 @@
             width:576px;
             font-weight:700;
         }
-        .style18{
-            width:99px;
-        }
-        .style19{
-            width:25px;
-        }
-        .style20{
-            text-align:center;
-            width:165px;
-            color:#FFFFFF;
-            text-decoration:underline;
-        }
         .auto-style1 {
             text-align: center;
             padding: 0;
             width: 914px;
         }
-        .styleText {
-            font-family:Tahoma;
+        
+        .auto-style2 {
+            font-family: Tahoma;
+            height: 23px;
+            color:black;
         }
+        
     </style>
 </head>
 <body bgcolor="#cccccc">
@@ -119,7 +84,7 @@
                             <td class="style17">
                                 <table align="center" class="style4">
                                     <tr>
-                                        <td class="styleText" colspan="3">
+                                        <td class="auto-style2" colspan="3">
                                             Register a student here:
                                         </td>
                                     </tr>
@@ -129,9 +94,9 @@
                                         <td>&nbsp;</td>
                                     </tr>
                                     <tr>
-                                        <td class="styleText">Username</td>
+                                        <td class="styleText" style = "color:black" >Username</td>
                                         <td>:</td>
-                                        <td class="styleText">
+                                        <td style = "color:black" class="styleText">
                                             <asp:TextBox ID="name" runat="server" width="200px"></asp:TextBox>
                                             
                                         </td>
@@ -142,9 +107,9 @@
                                         <td>&nbsp;</td>
                                     </tr>
                                     <tr>
-                                        <td class="styleText">Password</td>
+                                        <td style = "color:black" class="styleText">Password</td>
                                         <td>:</td>
-                                        <td class="styleText">
+                                        <td style = "color:black" class="styleText">
                                             <asp:TextBox ID="pass" runat="server" width="200px"></asp:TextBox>
                                             
                                         </td>

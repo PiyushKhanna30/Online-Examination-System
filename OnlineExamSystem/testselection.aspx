@@ -5,45 +5,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Test Selection</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <style type="text/css">
-        .style1{
-            width:1024px;
-        }
-        .style2{
-            font-family:Verdana;
-            font-size:xx-large;
-            font-weight:bold;
-            color:#000099;
-            text-align:center;
-            padding:0;
-        }
-        .style3{
-            font-size:large;
-            font-weight:bold;
-            color:#FFFFFF;
-            font-family:"Comic Sans MS";
-        }
-        .style9{
-            width:100%;
-        }
         .style10{
             width:280px;
         }
         .style11{
             width:448px;
         }
-        .style12{
-            color:#FFFFFF;
-            font-weight:bold;
-            padding:0;
-        }
         .style13{
             font-size:large;
             font-weight:bold;
             padding:0;
-        }
-        .styleText {
-            font-family:Tahoma;
         }
     </style>
 </head>
@@ -73,11 +46,11 @@
                         </tr>
                         <tr>
                             <td style="text-align:center">
-                                <table align="center" class="style9">
+                                <table align="center" class="style4">
                                     <tr>
                                         <td  class="style10">&nbsp;</td>
                                         <td class="style11">
-                                            <table align="center" class="style9 styleText">
+                                            <table align="center" class="style4 styleText">
                                                 
                                                 <tr>
                                                     <td class="style13 styleText">Select a Test</td>
