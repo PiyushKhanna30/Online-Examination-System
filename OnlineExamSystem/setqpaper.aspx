@@ -48,8 +48,6 @@
             <tr>
                 <td>
                     <asp:DropDownList ID="testlist" runat="server" height="20px" width="150px" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="settype" DataValueField="settype"></asp:DropDownList>
-                    <asp:EntityDataSource ID="SqlDataSource2" runat="server">
-                    </asp:EntityDataSource>
                     <asp:TextBox ID="testname" runat="server" Visible="False"></asp:TextBox>
                     <asp:Button ID="ntest" runat="server" Font-Bold="True" Text="New Test" Width="88px" onclick="ntest_click"></asp:Button>
                     <asp:Label ID="msg1" runat="server" ForeColor="Blue"></asp:Label>
