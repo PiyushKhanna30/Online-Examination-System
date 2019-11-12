@@ -50,7 +50,7 @@
                 <td colspan="2"></td>
             </tr>
             <tr>
-                <td colspan="2" class="styleText" style="text-align:center;font-weight:700">Password:<asp:TextBox runat="server" ID="TextBox1"></asp:TextBox></td>
+                <td colspan="2" class="styleText" style="text-align:center;font-weight:700">Password:<asp:TextBox runat="server" ID="pass"></asp:TextBox></td>
             </tr>
             <tr>
                 <td colspan="2"></td>
