@@ -5,15 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Online Exam System</title>
-    <style type="text/css">
+    <style>
         .style1 {
             width: 1024px;
         }
         .style2{
-            font-family:"Monotype Corsiva";
+            font-family:"Verdana";
             font-size:xx-large;
             font-weight:bold;
-            color:#3399FF;
+            color:#000099;
             text-align:center;
             padding:0;
         }
@@ -21,7 +21,7 @@
             font-size:large;
             font-weight:bold;
             color:#FFFFFF;
-            font-family:"Monotype Corsiva";
+            font-family:"Comic Sans MS";
         }
         .style4{
             width:100%;
@@ -30,20 +30,18 @@
             text-align:center;
         }
         .style12{
-            text-align:center;
-            width:165px;
-        }
-        .style14{
+            font-family:Tahoma;
             text-align:center;
             width:166px;
         }
+
     </style>
 </head>
 <body bgcolor="#cccccc">
     <form id="form1" runat="server">
     <div>
     
-        <table class="auto-style1" align="center">
+        <table align="center">
             <tr>
                 <td class="style2">Online Examination System</td>
             </tr>
@@ -52,7 +50,6 @@
             </tr>
             <tr bgcolor="#99CCFF" style="color:#000099; font-size:medium; font-weight:700">
                 <td>
-                    &nbsp;
                     <table align="center" class="style4">
                         <tr>
                             <td class="style12">
@@ -64,13 +61,13 @@
                             <td class="style12">
                                 <a href="#">Set Q Paper</a>
                             </td>
-                            <td class="style14">
+                            <td class="style12">
                                 <a href="#">Preview Q Paper</a>
                             </td>
-                            <td class="style14">
+                            <td class="style12">
                                 <a href="#">Delete Q Paper</a>
                             </td>
-                            <td class="style14">
+                            <td class="style12">
                                 <a href="#">View Report</a>
                             </td>
                             <td class="style5">

@@ -11,10 +11,10 @@
             width:1024px;
         }
         .style2{
-            font-family:"Monotype Corsiva";
+            font-family:Verdana;
             font-size:xx-large;
             font-weight:bold;
-            color:#3399FF;
+            color:#000099;
             text-align:center;
             padding:0;
         }
@@ -23,7 +23,7 @@
             font-size:large;
             font-weight:bold;
             color:#FFFFFF;
-            font-family:"Monotype Corsiva";
+            font-family:"Comic Sans MS";
         }
         .style4
         {
@@ -34,10 +34,7 @@
         }
         .style12
         {
-            text-align:center;
-            width:165px;
-        }
-        .style14{
+            font-family:Tahoma;    
             text-align:center;
             width:166px;
         }
@@ -46,6 +43,9 @@
             width:300px;
             height:60px:
         }
+        .styleText {
+            font-family:Tahoma;
+        }
     </style>
 </head>
 <body bgcolor="#cccccc">
@@ -53,13 +53,13 @@
     <div>
         <table align="center" class="style1">
             <tr>
-                <td class="style2">Online Exam</td>
+                <td class="style2">Online Examination System</td>
             </tr>
             <tr>
                 <td bgcolor="#3333FF">&nbsp;</td>
             </tr>
             <tr>
-                <td bgcolor="#99CCFF" style="color=#000099"; font-size:medium; font-weight:700">
+                <td bgcolor="#99CCFF" style="color:#000099; font-size:medium; font-weight:700" >
                     <table align="center" class="style4">
                         <tr>
                             <td class="style12">
@@ -71,16 +71,16 @@
                             <td class="style12">
                                 <a href="setqpaper.aspx">Set Q Paper</a>
                             </td>
-                            <td class="style14">
+                            <td class="style12">
                                 <a href="paperview.aspx">Preview Q Paper</a>
                             </td>
-                            <td class="style14">
+                            <td class="style12">
                                 <a href="deleteqpaper.aspx">Delete Q Paper</a>
                             </td>
-                            <td class="style14">
+                            <td class="style12">
                                 <a href="reports.aspx">View Report</a>
                             </td>
-                            <td class="style5">
+                            <td class="style12">
                                 <a href="adminlogout.aspx">Logout</a>
                             </td>
                         </tr>
@@ -91,7 +91,7 @@
                 <td>
                     <table align="center" class="style4">
                         <tr>
-                            <td bgcolor="#0066FF">
+                            <td bgcolor="#3333FF">
                                 &nbsp;
                             </td>
                             <td style="text-align:center">
@@ -102,37 +102,37 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td class="styleText">
                                             <a href="adduser.aspx">Add User</a>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td class="styleText">
                                             <a href="deleteuser.aspx">Delete User</a>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td class="styleText">
                                             <a href="setqpaper.aspx">Set Question Paper</a>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td class="styleText">
                                             <a href="paperview.aspx">Paper View</a>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td class="styleText">
                                             <a href="deleteqpaper.aspx">Delete Q Paper</a>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td class="styleText">
                                             <a href="reports.aspx">View  Report</a>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td class="styleText">
                                             <a href="adminlogout.aspx">Admin Logout</a>
                                         </td>
                                     </tr>
@@ -143,15 +143,16 @@
                                     </tr>
                                 </table>
                             </td>
-                            <td bgcolor="#0066FF">
+                            <td bgcolor="#3333FF">
                                 &nbsp;
                             </td>
                         </tr>
                     </table>
                 </td>
             </tr>
+
             <tr>
-                <td bgcolor="#33333FF">&nbsp;</td>
+                <td bgcolor="#3333FF">&nbsp;</td>
             </tr>
             <tr>
                 <td bgcolor="#666666" style="text-align:center">
