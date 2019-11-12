@@ -15,7 +15,7 @@
 <body bgcolor="#cccccc">
     <form id="form1" runat="server">
     <div>
-        <table align="center" class="style1">
+        &nbsp;<table align="center" class="style1">
             <tr>
                 <td class="style2">Online Examination System</td>
             </tr>
