@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 public partial class paperview : System.Web.UI.Page
 {
@@ -23,7 +24,7 @@ public partial class paperview : System.Web.UI.Page
         {
             Response.Redirect("login.aspx");
         }
-        con = new SqlConnection("Data Source=.;AttachDbFileName=|DataDirectory|\\myDB2.mdf;Integrated Security=True;User Instance=True");
+        con = new SqlConnection(ConfigurationManager.ConnectionStrings["teststring"].ConnectionString);
         con.Open();
 
         settype = System.Convert.ToString(Request.QueryString["settype"]);

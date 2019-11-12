@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Configuration;
 
 public partial class editqpaper : System.Web.UI.Page
 {
@@ -32,7 +33,7 @@ public partial class editqpaper : System.Web.UI.Page
 
         settype = System.Convert.ToString(Request.QueryString["settype"]);
         qid = System.Convert.ToInt16(Request.QueryString["qid"]);
-        con = new SqlConnection("Data Source=.;AttachDbFileName=|DataDirectory|\\myDB2.mdf;Integrated Security=True;User Instance=True");
+        con = new SqlConnection(ConfigurationManager.ConnectionStrings["teststring"].ConnectionString);
         con.Open();
 
         rqry = "select * from question where qid=" + qid;
