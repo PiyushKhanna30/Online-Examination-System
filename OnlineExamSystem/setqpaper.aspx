@@ -47,16 +47,13 @@
                 </td>
             </tr>
             <tr>
-<<<<<<< HEAD
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td  class="styleText">
                     <asp:DropDownList ID="testlist" runat="server" height="46px" width="147px" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="settype" DataValueField="settype"></asp:DropDownList>
-                <td>
-                    <asp:DropDownList ID="testlist" runat="server" height="20px" width="150px" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="settype" DataValueField="settype"></asp:DropDownList>
->>>>>>> a0a8f0e1b32954818ca3c1e1ad44cd7bed7c5713
                     <asp:TextBox ID="testname" runat="server" Visible="False"></asp:TextBox>
+                  
                     <asp:Button ID="ntest" runat="server" Font-Bold="True" Text="New Test" Width="97px" onclick="ntest_click" Height="23px"></asp:Button>
                     <br />
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=DESKTOP-J1EFRCC;Initial Catalog=OnlneExamSystem;Integrated Security=True"

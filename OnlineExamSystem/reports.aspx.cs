@@ -24,7 +24,7 @@ public partial class reports : System.Web.UI.Page
             Response.Redirect("login.aspx");
         }
 
-        con = new SqlConnection("Data Source=.;AttachDbFileName=|DataDirectory|\\myDB2.mdf;Integrated Security=True;User Instance=True");
+        con = new SqlConnection(ConfigurationManager.ConnectionStrings["teststring"].ConnectionString);
         con.Open();
         qry = "select * from results";
         cmd = new SqlCommand(qry, con);

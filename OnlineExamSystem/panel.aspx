@@ -54,7 +54,7 @@
                             <td bgcolor="#FFFFCC" class="style7">
                                 <%con.Open();
                                   rqry = "select * from question where settype='" + testtype + "' order by qid";
-                                  rcmd = new System.Data.SqlClient.SqlCommand(rqry, rcmd);
+                                  rcmd = new System.Data.SqlClient.SqlCommand(rqry, con);
                                   rdr = rcmd.ExecuteReader();
                                   c=1;
                                   while(rdr.Read())
@@ -143,7 +143,7 @@
                                       c=c+1;
                                       
                                       }
-                                  } const.Close(); %>
+                                  } con.Close(); %>
                                        
                             </td>
                         </tr>

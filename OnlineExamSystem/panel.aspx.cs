@@ -45,7 +45,7 @@ public partial class panel : System.Web.UI.Page
             count = 1;
         }
         time.Text = DateTime.Now.ToString();
-        con = new SqlConnection("Data Source=.;AttachDbFileName=|DataDirectory|\\myDB2.mdf;Integrated Security=True;User Instance=True");
+        con = new SqlConnection(ConfigurationManager.ConnectionStrings["teststring"].ConnectionString);
         con.Open();
 
         qry = "select * from question where settype='" + testtype + "'";

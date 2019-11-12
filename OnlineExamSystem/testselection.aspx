@@ -64,6 +64,12 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
+                                                    <td>
+                                                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=DESKTOP-J1EFRCC;Initial Catalog=OnlneExamSystem;Integrated Security=True"
+                                                            SelectCommand="select distinct [settype] from [question]"></asp:SqlDataSource>
+                                                    </td>
+                                                </tr>
+                                                <tr>
                                                     <td class="styleText">
                                                         <asp:Button ID="submit" runat="server" Text="Submit" Width="200px" OnClick="Button1_Click" Style="font-weight:700"></asp:Button>
                                                     </td>
