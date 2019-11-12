@@ -29,7 +29,9 @@ public partial class login : System.Web.UI.Page
         dr = cmd.ExecuteReader();
         if (dr.HasRows)
         {
-            if(name.Text == "admin")
+            dr.Read();
+            string type = Convert.ToString(dr.GetValue(2));
+            if(type == "admin")
             {
                 ad=new HttpCookie("acook");
                 ad.Values.Add("un",name.Text);
