@@ -53,11 +53,6 @@
             <tr>
                 <td  class="styleText">
                     <asp:DropDownList ID="testlist" runat="server" height="46px" width="147px" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="settype" DataValueField="settype"></asp:DropDownList>
-                    <br />
-                    <asp:EntityDataSource ID="SqlDataSource2" runat="server">
-                    </asp:EntityDataSource>
-                    <br />
-=======
                 <td>
                     <asp:DropDownList ID="testlist" runat="server" height="20px" width="150px" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="settype" DataValueField="settype"></asp:DropDownList>
 >>>>>>> a0a8f0e1b32954818ca3c1e1ad44cd7bed7c5713
