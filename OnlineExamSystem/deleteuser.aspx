@@ -61,7 +61,7 @@
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=DESKTOP-J1EFRCC;Initial Catalog=OnlneExamSystem;Integrated Security=True"
                         SelectCommand="Select [username] from [login] where ([type] = @type)">
                         <SelectParameters>
-                            <asp:ControlParameter ControlID="userlist" DefaultValue="'user" Name="type" PropertyName="SelectedValue" Type="String" />
+                            <asp:ControlParameter ControlID="userlist" DefaultValue="user" Name="type" PropertyName="SelectedValue" Type="String" />
                         </SelectParameters>
                     </asp:SqlDataSource>
                 </td>

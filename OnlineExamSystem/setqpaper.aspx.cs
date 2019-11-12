@@ -48,6 +48,7 @@ public partial class setqpaper : System.Web.UI.Page
         msg6.Text = "";
         msg7.Text = "";
 
+        //get the right option answer for the question
         if (radiobutton1.Checked)
             ans = 1;
         if (radiobutton2.Checked)
@@ -59,17 +60,20 @@ public partial class setqpaper : System.Web.UI.Page
 
         if (testlist.Visible)
         {
+            //this works if user chooses from the list of available tests
             test = testlist.Text;
         }
         else
         {
             if (testname.Text == "")
             {
+                //to check whether testbox has been left blanked?
                 msg1.Text = "Enter the test name";
                 flag = 0;
             }
             else
             {
+                //check whether test name already exists
                 con.Open();
                 nqry = "select * from question where settype='" + testname.Text + "'";
                 rcmd = new SqlCommand(nqry, con);
@@ -83,7 +87,7 @@ public partial class setqpaper : System.Web.UI.Page
                 con.Close();
             }
         }
-
+        //check for empty boxes
         if (question.Text=="" || question.Text==" ")
         {
             msg2.Text = "Enter the question";

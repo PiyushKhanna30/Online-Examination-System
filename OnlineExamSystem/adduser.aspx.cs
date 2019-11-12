@@ -6,13 +6,14 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
+using System.Configuration;
 
 public partial class adduser : System.Web.UI.Page
 {
     SqlConnection con;
     SqlCommand cmd;
     SqlDataReader dr;
-    string cqry,aqry;
+    string cqry, aqry;
     HttpCookie ck;
     HttpCookie ad;
 
@@ -24,15 +25,16 @@ public partial class adduser : System.Web.UI.Page
             Response.Redirect("login.aspx");
         }
 
-        con = new SqlConnection("Data Source=.;AttachDbFileName=|DataDirectory|\\myDB2.mdf;Integrated Security=True;User Instance=True");
+        con = new SqlConnection(ConfigurationManager.ConnectionStrings["teststring"].ConnectionString);
         con.Open();
     }
     protected void submit_Click(object sender, EventArgs e)
     {
+        //Checking whether username already exists
         cqry = "select * from login where username='" + name.Text + "'";
         cmd = new SqlCommand(cqry, con);
         dr = cmd.ExecuteReader();
-        if(dr.HasRows)
+        if (dr.HasRows)
         {
             mssg.Text = "Username already existes !";
 
@@ -44,7 +46,7 @@ public partial class adduser : System.Web.UI.Page
             aqry = "insert into login values('" + name.Text + "','" + pass.Text + "','user')";
             cmd = new SqlCommand(aqry, con);
             cmd.ExecuteNonQuery();
-            mssg.Text = "USername successfully added.";
+            mssg.Text = "Username successfully added.";
             name.Text = "";
             pass.Text = "";
         }

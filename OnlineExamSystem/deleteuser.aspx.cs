@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Configuration;
 
 public partial class deleteuser : System.Web.UI.Page
 {
@@ -23,14 +24,14 @@ public partial class deleteuser : System.Web.UI.Page
     }
     protected void duser_click(object sender, EventArgs e)
     {
-        con = new SqlConnection("Data Source=.;AttachDbFileName=|DataDirectory|\\myDB2.mdf;Integrated Security=True;User Instance=True");
+        con = new SqlConnection(ConfigurationManager.ConnectionStrings["teststring"].ConnectionString);
         con.Open();
 
         qry = "delete from login where username='" + userlist.Text + "'";
         cmd = new SqlCommand(qry, con);
         cmd.ExecuteNonQuery();
 
-        //Response.Redirect("deleteuser.aspx");
         Response.Write("<script>alert('User deleted Successfully')</script>");
+        Response.Redirect("deleteuser.aspx");
     }
 }
